@@ -1,7 +1,9 @@
 """
+
 This converts an ssp log to a csv.
 
-run in command line: run ssp2csv.py -f input -n output
+run in command line: python ssp2csv.py -f input -n output
+in python shell: run ssp2csv.py -f input -n output
 input and output filenames should include directory if not in current folder
 
 Created by L A Fiorentino, NOAA COP-OPS
@@ -13,8 +15,6 @@ import csv
 import itertools
 
 def read_ssp(filename):
-    """ This function reads the .hdr file for the number of bins
-    and measurements"""
     variables = []
     ssp_dict = {}
     with open(filename) as file:
