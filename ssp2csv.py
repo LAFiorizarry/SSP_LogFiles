@@ -1,4 +1,5 @@
 """
+min requirements Python 3.5
 
 This converts an ssp log to a csv.
 
@@ -7,7 +8,7 @@ in python shell: run ssp2csv.py -f input -n output
 input and output filenames should include directory if not in current folder
 
 Created by L A Fiorentino, NOAA COP-OPS
-Last Updated: 11 March 2020
+Last Updated: 25 March 2020
 
 """
 import argparse
