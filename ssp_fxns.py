@@ -17,14 +17,20 @@ def read_ssp(filename):
                 continue
             new_variable = line_split[2]
             if new_variable in variables:
-                ssp_dict[new_variable].append(line_split[3])
+                if line_split[-1] == 'G\n':
+                    ssp_dict[new_variable].append(line_split[3])
+                else:
+                    ssp_dict[new_variable].append('NaN')
                 ssp_dict[new_variable + '_time'].append(line_split[0]
                                                         + ' ' + line_split[1])
             else:
                 variables.append(new_variable)
                 ssp_dict[new_variable + '_time'] = []
                 ssp_dict[new_variable] = []
-                ssp_dict[new_variable].append(line_split[3])
+                if line_split[-1] == 'G\n':
+                    ssp_dict[new_variable].append(line_split[3])
+                else:
+                    ssp_dict[new_variable].append('NaN')
                 ssp_dict[new_variable + '_time'].append(line_split[0]
                                                         + ' ' + line_split[1])
     return ssp_dict
