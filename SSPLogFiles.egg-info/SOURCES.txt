@@ -1,0 +1,7 @@
+README.md
+setup.py
+SSPLogFiles.egg-info/PKG-INFO
+SSPLogFiles.egg-info/SOURCES.txt
+SSPLogFiles.egg-info/dependency_links.txt
+SSPLogFiles.egg-info/top_level.txt
+old/ssp2csv.py
